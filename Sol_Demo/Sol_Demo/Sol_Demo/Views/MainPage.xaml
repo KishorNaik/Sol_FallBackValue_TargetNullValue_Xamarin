@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Sol_Demo.ViewModels"
+             x:Class="Sol_Demo.Views.MainPage">
+
+    <ContentPage.BindingContext>
+        <vm:CustomerViewModel></vm:CustomerViewModel>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Label Text="{Binding Customer.FullNames, FallbackValue=The given Property value not found}"></Label>
+        <Label Text="{Binding Customer.FullName, TargetNullValue=The value is empty}"></Label>
+    </StackLayout>
+</ContentPage>
